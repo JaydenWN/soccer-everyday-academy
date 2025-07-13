@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+    icon?: Image;
+    text: string;
+    link: string;
+    /** choose between the “default” (black bg / white text) or the “dark” theme */
+    variant?: "default" | "dark";
+}
+
+const { icon, text, link, variant = "default" } = Astro.props;
+
+// compute a class name based on the variant:
+const className = `btn btn--${variant}`;
+---
+
+<a href={link} class={className}>
+    {icon && <Image src={icon} alt={text} />}
+    {text}
+</a>
+
+<style>
+    /* base styles shared by both variants */
+    .btn {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: 0.55rem 0.75rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: var(--box-shadow);
+        border: 1px solid currentColor;
+        transition:
+            background-color 0.2s,
+            color 0.2s;
+    }
+
+    /* “default” == black bg, white text */
+    .btn--default {
+        background-color: rgba(30, 30, 30, 0.58);
+        color: white;
+    }
+
+    /* “dark” == e.g. very dark gray bg, light gray text */
+    .btn--dark {
+        color: var(--dark);
+        border: 1px solid var(--dark);
+    }
+
+    /* (you can of course tweak the colors to taste) */
+</style>

@@ -1,0 +1,147 @@
+---
+import SecondaryButton from "../common/Secondary_Button.astro";
+import PrimaryButton from "../common/Primary_Button.astro";
+import { Image } from "astro:assets";
+import TickIcon from "@icons/tick-black.svg";
+import callIcon from "@icons/phone-black.svg";
+import contactIcon from "@icons/contact-white.svg";
+---
+
+<section>
+    <div class="container">
+        <div class="why-header">
+            <h2>
+                Why Choose Soccer Everyday Academy for Coaching on the Central
+                Coast
+            </h2>
+            <p>
+                Choosing the right coach makes all the difference. At Soccer
+                Everyday Academy, we combine global experience with a personal
+                touch to bring the best out of every player. Whether it’s for
+                your child or yourself, we’re here to help you train smarter,
+                play better and enjoy the game more than ever.
+            </p>
+            <div class="cta-buttons">
+                <SecondaryButton
+                    link="tel:"
+                    text="Call Us"
+                    icon={callIcon}
+                    variant="dark"
+                />
+                <PrimaryButton
+                    link="/contact"
+                    text="Book A Session"
+                    icon={contactIcon}
+                />
+            </div>
+        </div>
+
+        <div class="reasons">
+            <div class="reason">
+                <TickIcon width={"60px"} />
+                <h3>Certified and Experienced</h3>
+                <p>
+                    With a Sports Science degree, Football Australia C Licence
+                    and years coaching around the world, our training is backed
+                    by real knowledge. You’re not just getting a coach, you’re
+                    getting a mentor with proven methods.
+                </p>
+            </div>
+
+            <div class="reason">
+                <TickIcon width={"60px"} />
+                <h3>Tailored Sessions for All Ages</h3>
+                <p>
+                    From kids taking their first steps on the pitch to adults
+                    chasing their best form, every session is built around your
+                    goals. We meet players where they’re at and push them
+                    forward at the right pace.
+                </p>
+            </div>
+
+            <div class="reason">
+                <TickIcon width={"60px"} />
+                <h3>Passion That Shows</h3>
+                <p>
+                    We love the game and it shows in every session. That energy
+                    helps players stay motivated, focused and excited to keep
+                    learning.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h2 {
+        font-size: 2em;
+        background-color: var(--dark);
+        color: white;
+        padding: 1rem 1rem 0.8rem 1rem;
+    }
+    h3 {
+        font-size: 1.65rem;
+    }
+    .why-header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .reasons {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .reason {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border: 6px solid var(--dark);
+    }
+    .image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .reason {
+            width: calc(50% - 2rem);
+            box-sizing: border-box;
+        }
+        .reasons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            display: grid;
+            grid-template-columns: 0.65fr 1fr;
+            grid-template-areas: "why-header reasons";
+            gap: 3rem;
+        }
+        .why-header {
+            grid-area: why-header;
+        }
+        .reasons {
+            grid-area: reasons;
+            gap: 4rem;
+            margin-top: 0px;
+        }
+    }
+</style>

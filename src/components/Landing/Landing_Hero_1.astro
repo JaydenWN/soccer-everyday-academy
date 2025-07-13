@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import PrimaryButton from "../common/Primary_Button.astro";
+import SecondaryButton from "../common/Secondary_Button.astro";
+import heroImage from "@images/soccer-central-coast-hero.webp";
+import callIcon from "@icons/phone-white.svg";
+import contactIcon from "@icons/contact-black.svg";
+---
+
+<header>
+    <Image src={heroImage} alt="title" class="hero-image" />
+    <div class="container">
+        <h1>Central Coast Soccer Coaching for Kids, Teens and Adults</h1>
+        <p>
+            <strong>Soccer Everyday Academy </strong>offers expert football
+            coaching across the Central Coast. We run one-on-one and small group
+            sessions for all ages, with a focus on skill, confidence and game
+            understanding. Backed by global experience and sports science, we
+            coach with purpose and passion.
+        </p>
+        <div class="cta-buttons">
+            <SecondaryButton link="tel:" text="Call Us" icon={callIcon} />
+            <PrimaryButton
+                link="/contact"
+                text="Book a session"
+                icon={contactIcon}
+                variant="yellow"
+            />
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        position: relative;
+    }
+    .hero-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+    }
+    h1 {
+        font-size: 3em;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            width: 75%;
+        }
+        p {
+            width: 80%;
+        }
+        .container {
+            gap: 3rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            gap: 4rem;
+        }
+        h1,
+        p {
+            max-width: 600px;
+        }
+    }
+</style>

@@ -1,0 +1,110 @@
+---
+import LandingServicesCard from "./Landing_Services_Card.astro";
+import placeholder from "../../../public/placeholder.svg";
+import OneImage from "@images/one-on-one-soccer.jpg";
+import groupImage from "@images/group-soccer-training.webp";
+import soccerCoach from "@images/central-coast-soccer-coach-training.JPG";
+import strengthImage from "@images/strength-conditioning-central-coast-soccer.jpeg";
+import soccerClinicImage from "@images/football-clinic-central-coast.jpg";
+---
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Soccer Coaching Services on the Central Coast</h2>
+            <p>
+                Soccer Everyday Academy offers a full range of coaching services
+                across the Central Coast for players of all ages and levels.
+                Whether you're looking to build confidence, improve fitness, or
+                prepare for competition, we've got a program to suit. All
+                sessions are delivered by a qualified coach with international
+                experience and a strong sports science background.
+            </p>
+        </div>
+
+        <div class="service-list">
+            <LandingServicesCard
+                title="1-on-1 Soccer Training"
+                text="Personalised coaching designed to target individual strengths and improve areas that need work. These sessions are perfect for focused development in technique, decision-making and fitness."
+                image={OneImage}
+                ctaText="Book A Session"
+            />
+
+            <LandingServicesCard
+                title="Small Group Sessions"
+                text="Train in a fun and competitive environment with mates or teammates. Small group sessions build teamwork, intensity and game awareness while still keeping the focus on individual growth."
+                image={groupImage}
+                ctaText="Book A Session"
+            />
+
+            <LandingServicesCard
+                title="Soccer Coach Courses"
+                text="From beginner to performance level, our coaching courses are built to educate and inspire the next generation of football coaches. Learn how to plan sessions, apply tactics and lead with confidence."
+                image={soccerCoach}
+                ctaText="Book A Session"
+            />
+
+            <LandingServicesCard
+                title="Strength and Conditioning"
+                text="Football-specific strength and fitness training to improve speed, power and endurance. Backed by a sports science degree and personal training certification, our program is built for results."
+                image={strengthImage}
+                ctaText="Book A Session"
+            />
+
+            <LandingServicesCard
+                title="Football Clinics"
+                text="School holiday and weekend clinics across the Central Coast, open to all levels. These high-energy sessions focus on technical skills, gameplay and confidence-building in a fun group setting."
+                image={soccerClinicImage}
+                ctaText="Book A Session"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-size: 2em;
+        margin-bottom: 2rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    @media (min-width: 768px) {
+        .section-header {
+            text-align: center;
+            width: 75%;
+            margin: 0px auto;
+            gap: 4rem;
+        }
+        .service-list {
+            gap: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .container {
+            gap: 6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .service-list {
+            flex-direction: column;
+            gap: 6rem;
+        }
+        .section-header {
+            width: 50%;
+        }
+    }
+</style>
