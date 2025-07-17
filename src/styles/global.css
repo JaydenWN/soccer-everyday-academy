@@ -1,6 +1,7 @@
 :root {
 	--dark: #1E1E1E;
 	--yellow: #F7EA3E;
+	--grey: #F4F4F4;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px
 		rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
@@ -155,6 +156,11 @@ h6 {
 
 p {
 	line-height: 2em;
+}
+
+.p-block{
+	padding-left: 1rem;
+	border-left: 8px solid var(--dark);
 }
 .container {
 	padding: 2.5rem 1rem;

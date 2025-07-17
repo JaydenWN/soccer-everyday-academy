@@ -1,7 +1,21 @@
 ---
+import AboutCoach from "../components/About/About_Coach.astro";
+import AboutIntro from "../components/About/About_Intro.astro";
+import AboutTestimonials from "../components/About/About_Testimonials.astro";
+import AboutWhy from "../components/About/About_Why.astro";
+import AboutContact from "../components/About/About_Contact.astro";
+import SubpageHero from "../components/common/Subpage_Hero.astro";
 import Layout from "../layouts/Base_Layout.astro";
 ---
 
 <Layout title="About Me" description="Lorem ipsum dolor sit amet">
-	<h1>About</h1>
+	<SubpageHero
+		title="About Soccer Every Day Academy, The Central Coast Football Training Experts"
+		text="At Soccer Every Day Academy, we’re passionate about building better footballers from the ground up. With personal training, 1v1 sessions, small groups, strength and conditioning, and school holiday clinics, our programs are built for real growth. Backed by years of experience across Australia and beyond, we now bring elite football coaching to the Central Coast."
+	/>
+	<AboutIntro />
+	<AboutCoach />
+	<AboutTestimonials />
+	<AboutWhy />
+	<AboutContact />
 </Layout>

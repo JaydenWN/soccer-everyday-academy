@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import FAQ from "../common/FAQ.astro";
-import placeholder from "@images/central-coast-soccer-stadium.webp";
+import placeholder from "@images/strength-conditioning-central-coast-soccer.webp";
 
 const qaObject = [
     {
@@ -10,7 +10,7 @@ const qaObject = [
     },
     {
         q: "Where do coaching sessions take place on the Central Coast?",
-        a: "We run sessions at local parks and fields across the Central Coast, with most sessions held around Terrigal and surrounding suburbs. We’ll confirm the exact location when you book.",
+        a: "We run sessions at local parks and fields across the Central Coast, with most sessions held around Long Jetty and surrounding suburbs. We’ll confirm the exact location when you book.",
     },
     {
         q: "Do I need to bring anything to soccer training?",
@@ -22,7 +22,7 @@ const qaObject = [
     },
     {
         q: "How do I book a soccer coaching session?",
-        a: "Simply give us a call on 0432 275 674 or reach out through our social media or contact page. We'll chat about your goals and find the right session time for you.",
+        a: "Simply click 'book now', give us a call on 0432 275 674 or reach out through our social media or contact page. We'll chat about your goals and find the right session time for you.",
     },
 ];
 ---
@@ -50,7 +50,9 @@ const qaObject = [
     }
     .image {
         width: 100%;
-        height: auto;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
     }
 
     @media (min-width: 768px) {

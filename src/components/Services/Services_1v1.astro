@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import serviceImage from "@images/one-on-one-soccer.webp";
+import ServicesCTA from "./Services_CTA.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="text-section">
+            <h2>1v1 Soccer Coaching on the Central Coast</h2>
+            <p>
+                Our one-on-one soccer training sessions are designed for players
+                who want focused, personalised development. Whether you're
+                working on ball control, positioning, shooting or fitness, these
+                sessions give you the time and attention needed to level up
+                fast.
+            </p>
+            <p>
+                Each session is tailored to the player's goals and ability. With
+                no distractions and full access to expert guidance, players of
+                all ages can build confidence, sharpen technique and improve
+                decision-making under pressure.
+            </p>
+        </div>
+
+        <Image
+            src={serviceImage}
+            alt="1v1 soccer training central coast"
+            class="service-image"
+        />
+
+        <div class="why-section">
+            <h3>
+                Why Choose Soccer Everyday Academy for Personal Soccer Coaching
+            </h3>
+            <ServicesWhy
+                whyArray={[
+                    {
+                        title: "Individualised Coaching",
+                        text: "We build every session around your individual needs. No cookie-cutter drills, just real development tailored to where you're at and where you want to go.",
+                    },
+                    {
+                        title: "Qualified and Experienced Coach",
+                        text: "With a Football Australia C Licence, Sports Science degree and international coaching experience, you're learning from someone who knows how to get results.",
+                    },
+                    {
+                        title: "Progress You Can See",
+                        text: "We track your growth over time and adjust training to keep you moving forward. Whether it's your first session or your fiftieth, you’ll leave better than you arrived.",
+                    },
+                ]}
+            />
+        </div>
+        <div class="cta-section">
+            <ServicesCTA
+                title="Ready for Focused Football Training?"
+                text="Book a one-on-one session today and take your skills to the next level with coaching built just for you."
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark);
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .cta-section {
+        margin-top: 2rem;
+    }
+</style>

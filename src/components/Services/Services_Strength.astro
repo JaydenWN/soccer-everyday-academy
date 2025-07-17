@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import serviceImage from "@images/soccer-strength-training.jpeg";
+import ServicesCTA from "./Services_CTA.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="text-section">
+            <h2>Football Strength and Conditioning on the Central Coast</h2>
+            <p>
+                Our strength and conditioning sessions are built specifically
+                for footballers. We focus on developing speed, agility, power
+                and endurance – all the physical tools needed to perform better
+                and stay injury-free on the pitch.
+            </p>
+            <p>
+                Led by a qualified personal trainer with a Sports Science
+                degree, these sessions are grounded in proven athletic
+                development principles. Whether you're looking to build your
+                base fitness or get an edge before the season, we’ll tailor a
+                program to suit your level and goals.
+            </p>
+        </div>
+
+        <Image
+            src={serviceImage}
+            alt="1v1 soccer training central coast"
+            class="service-image"
+        />
+
+        <div class="why-section">
+            <h3>
+                Why Train with Soccer Everyday Academy for Strength and
+                Conditioning
+            </h3>
+            <ServicesWhy
+                variant="light"
+                whyArray={[
+                    {
+                        title: "Football-Specific Focus",
+                        text: "Every movement, drill and rep is designed with football in mind. We’re not running generic gym programs. We build athletes for the demands of the game.",
+                    },
+                    {
+                        title: "Qualified Sports Science Coach",
+                        text: "Train with someone who understands how the body works and what footballers need. With both academic knowledge and on-field experience, we bridge the gap between gym and pitch.",
+                    },
+                    {
+                        title: "Programs for All Levels",
+                        text: "Whether you're just getting started or already competing, we’ll match the training to your ability and progression. No fluff, just real physical development that translates to game day.",
+                    },
+                ]}
+            />
+        </div>
+        <div class="cta-section">
+            <ServicesCTA
+                title="Get Stronger. Get Fitter. Play Better."
+                text="Book your football conditioning session now and start building the engine you need to perform at your best."
+                variant="dark"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .cta-section {
+        margin-top: 2rem;
+    }
+</style>

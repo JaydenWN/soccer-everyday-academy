@@ -1,7 +1,25 @@
 ---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import Services1V1 from "../components/Services/Services_1v1.astro";
+import ServicesCoach from "../components/Services/Services_Coach.astro";
+import ServicesGroup from "../components/Services/Services_Group.astro";
+import ServicesIntro from "../components/Services/Services_Intro.astro";
+import ServicesStrength from "../components/Services/Services_Strength.astro";
+import ServicesHoliday from "../components/Services/Services_Holiday.astro";
+import ServicesContact from "../components/Services/Services_Contact.astro";
 import Layout from "../layouts/Base_Layout.astro";
 ---
 
 <Layout title="Services" description="Lorem ipsum dolor sit amet">
-    <h1>Services</h1>
+    <SubpageHero
+        title="Soccer Coaching Services on the Central Coast"
+        text="Soccer Everyday Academy delivers expert football training for kids, teens and adults across the Central Coast. From 1-on-1 coaching to strength and conditioning, our services are designed to help every player build confidence, improve skills and love the game. Whether you're just starting out or chasing performance, we’ve got a session to suit."
+    />
+    <ServicesIntro />
+    <Services1V1 />
+    <ServicesGroup />
+    <ServicesCoach />
+    <ServicesStrength />
+    <ServicesHoliday />
+    <ServicesContact />
 </Layout>

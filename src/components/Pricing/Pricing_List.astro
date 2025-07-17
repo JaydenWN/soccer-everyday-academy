@@ -1,0 +1,89 @@
+---
+import PricingCard from "./Pricing_Card.astro";
+---
+
+<section>
+    <div class="container">
+        <PricingCard
+            title="1v1 Personal Training"
+            list={[
+                "Strength",
+                "Mobility",
+                "Nutrition",
+                "Mobility",
+                "Complete Evaluation",
+                "1 Hour Session",
+            ]}
+        >
+            <p><strong>$75 Per Hour</strong></p>
+            <p>or</p>
+            <p><strong>8 Sessions for $480</strong></p>
+        </PricingCard>
+
+        <PricingCard
+            title="Small Group Package"
+            list={[
+                "Strength",
+                "Mobility",
+                "Nutrition",
+                "Mobility",
+                "Complete Evaluation",
+                "1 Hour Session",
+            ]}
+        >
+            <p><strong>$325</strong></p>
+            <p>1 Day / (8 Weeks)</p>
+            <p><strong>$555</strong></p>
+            <p>2 Days / (8 Weeks)</p>
+        </PricingCard>
+
+        <PricingCard
+            title="Strength & Conditioning"
+            list={[
+                "4 People Sessions",
+                "Speed",
+                "Agility",
+                "Core",
+                "Boost Performance",
+                "90 Minute Session",
+            ]}
+        >
+            <p><strong>$325</strong></p>
+            <p>1 Day / (8 Weeks)</p>
+            <p><strong>$555</strong></p>
+            <p>2 Days / (8 Weeks)</p>
+        </PricingCard>
+
+        <PricingCard
+            title="Holiday football clinics"
+            list={[
+                "Small Groups",
+                "Skills-Based Drills",
+                "Game Scenarios",
+                "Tactical Awareness",
+                "Build Confidence",
+            ]}
+        >
+            <p><strong>Contact For Pricing</strong></p>
+        </PricingCard>
+
+        <PricingCard
+            title="Soccer Coach Courses"
+            list={[
+                "Practical Football Education",
+                "Learn to Lead, Motivate & Develop",
+                "Ideal for Parents & Aspiring Coaches",
+            ]}
+        >
+            <p><strong>Contact For Pricing</strong></p>
+        </PricingCard>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import serviceImage from "@images/group-soccer-training.webp";
+import ServicesCTA from "./Services_CTA.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="text-section">
+            <h2>Small Group Soccer Training on the Central Coast</h2>
+            <p>
+                Our small group soccer sessions are perfect for players who want
+                high-energy, game-focused training with mates or teammates.
+                Groups are kept small to make sure everyone gets plenty of ball
+                time, feedback and challenge.
+            </p>
+            <p>
+                We focus on building teamwork, communication, decision-making
+                and match awareness, all while developing individual skills.
+                These sessions bring out the best in players by creating a fun,
+                competitive environment that pushes everyone to improve.
+            </p>
+        </div>
+
+        <Image
+            src={serviceImage}
+            alt="1v1 soccer training central coast"
+            class="service-image"
+        />
+
+        <div class="why-section">
+            <h3>Why Book Small Group Training with Soccer Everyday Academy</h3>
+            <ServicesWhy
+                variant="light"
+                whyArray={[
+                    {
+                        title: "Learn With Others, Grow Together",
+                        text: "Training in a group helps players support and challenge each other. It's a great way to build confidence and bring your skills into match-like situations.",
+                    },
+                    {
+                        title: "Perfect Balance of Coaching and Game Play",
+                        text: "We combine drills with small-sided games so players can apply what they learn in real-time. It's the best way to bridge the gap between training and match day.",
+                    },
+                    {
+                        title: "Flexible and Fun",
+                        text: "Sessions are built to suit the group's age and ability, so everyone gets value. Whether it's a group of friends or teammates, we keep it fun and focused.",
+                    },
+                ]}
+            />
+        </div>
+        <div class="cta-section">
+            <ServicesCTA
+                title="Train as a Team, Improve as a Player"
+                text="Book your small group session now and bring your football to life in a competitive, high-energy setting."
+                variant="dark"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .cta-section {
+        margin-top: 2rem;
+    }
+</style>

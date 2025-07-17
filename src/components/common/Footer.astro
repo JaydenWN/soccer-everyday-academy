@@ -2,6 +2,10 @@
 const today = new Date();
 import placeholder from "@images/logo.svg";
 import { Image } from "astro:assets";
+import Instagram from "@icons/instagram-white.svg";
+import Youtube from "@icons/youtube-white.svg";
+import Phone from "@icons/phone-white.svg";
+import Mail from "@icons/mail-white.svg";
 ---
 
 <footer>
@@ -24,6 +28,9 @@ import { Image } from "astro:assets";
 					<li>
 						<a href="/">Contact</a>
 					</li>
+					<li>
+						<a href="/pricing">Pricing</a>
+					</li>
 				</ul>
 			</div>
 
@@ -31,18 +38,28 @@ import { Image } from "astro:assets";
 				<h3>Social Links</h3>
 				<ul>
 					<li>
-						<a href="/">Instagram</a>
+						<a href="/"><Instagram class="icon" /> Instagram</a>
 					</li>
 					<li>
-						<a href="/">YouTube</a>
+						<a href="/"><Youtube class="icon" /> YouTube</a>
 					</li>
 				</ul>
 			</div>
 
 			<div class="contact-details">
 				<h3>Contact Details</h3>
-				<a href="tel:0432 275 674">0432 275 674</a>
-				<a href="mailto:ronanvizeu@gmail.com">ronanvizeu@gmail.com</a>
+				<ul>
+					<li>
+						<a href="tel:0432 275 674"
+							><Phone class="icon" />0432 275 674</a
+						>
+					</li>
+					<li>
+						<a href="mailto:info@seagroup.com"
+							><Mail class="icon" />info@seagroup.com</a
+						>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<span class="beachside-link">
@@ -88,14 +105,22 @@ import { Image } from "astro:assets";
 		text-decoration: none;
 		color: white;
 	}
-	.contact-details a:first-of-type {
-		margin-right: 2rem;
-	}
+
 	.beachside-link {
 		text-align: center;
 	}
 	.beachside-link a {
 		color: var(--yellow);
+	}
+	.icon {
+		width: 18px;
+		height: auto;
+	}
+	.social-links a,
+	.contact-details a {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	@media (min-width: 768px) {

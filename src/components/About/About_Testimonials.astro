@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import QuoteIcon from "@icons/quote-black.svg";
+import historyImage1 from "@images/ronan-child-team.webp";
+import historyImage2 from "@images/coaching-brazil.webp";
+import historyImage3 from "@images/ronan-soccer-academy.webp";
+---
+
+<section>
+    <div class="container">
+        <Image src={historyImage1} alt="ronan soccer young age" class="image" />
+
+        <div class="testimonial">
+            <QuoteIcon />
+            <blockquote>
+                Joining SEA is one of the best decisions I have made for my son.
+                The training sessions are extremely well organized and we can
+                see my son’s growth and technical skills progress quickly on the
+                pitch. Coach Ronan is an asset to the community, his passion and
+                dedication is incredible.
+            </blockquote>
+            <p>- Belinda Parent, Central Coast NSW</p>
+        </div>
+
+        <Image
+            src={historyImage2}
+            alt="ronan soccer young age in brazil"
+            class="image"
+        />
+
+        <div class="testimonial">
+            <QuoteIcon />
+            <blockquote>
+                Ronan is a great professional with attention to detail. Since
+                our first session, he showed interest and has been very
+                professional. Focused on results. I would definitely recommend.
+            </blockquote>
+            <p>- Heitor</p>
+        </div>
+
+        <Image
+            src={historyImage3}
+            alt="ronan soccer young age in brazil"
+            class="image"
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: var(--grey);
+    }
+    .testimonial p {
+        font-weight: bold;
+    }
+    blockquote {
+        line-height: 160%;
+    }
+</style>

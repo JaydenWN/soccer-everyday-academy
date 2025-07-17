@@ -1,0 +1,64 @@
+---
+import SecondaryButton from "../common/Secondary_Button.astro";
+import PrimaryButton from "../common/Primary_Button.astro";
+import callIconWhite from "@icons/phone-white.svg";
+import callIconBlack from "@icons/phone-black.svg";
+import contactIcon from "@icons/contact-black.svg";
+
+export interface Props {
+    title: string;
+    text: string;
+    variant?: "light" | "dark";
+}
+
+const { title, text, variant = "light" } = Astro.props;
+
+const className = `cta cta-${variant}`;
+---
+
+<div class={className}>
+    <h3>{title}</h3>
+    <p>{text}</p>
+    <div class="cta-buttons">
+        <SecondaryButton
+            link="tel:"
+            text="Call Us"
+            icon={variant === "light" ? callIconBlack : callIconWhite}
+            variant={variant === "light" ? "dark" : "default"}
+        />
+        <PrimaryButton
+            link="/contact"
+            text="Book a session"
+            icon={contactIcon}
+            variant="yellow"
+        />
+    </div>
+</div>
+
+<style>
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .cta {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    .cta-light {
+        background-color: white;
+        color: black;
+    }
+    .cta-dark {
+        background-color: var(--dark);
+        color: white;
+    }
+</style>

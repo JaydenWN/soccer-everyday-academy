@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import CertIcon from "@icons/cert.svg";
+import RonanImage from "@images/central-coast-soccer-coach-training.webp";
+---
+
+<section>
+    <div class="container">
+        <div class="coach-ronan">
+            <h2>Meet Ronan – Founder and Head Coach</h2>
+            <p>
+                Ronan started Soccer Every Day Academy with one goal in mind, to
+                give players of all levels the tools they need to grow. With
+                years of coaching experience across Australia, Europe and Asia,
+                Ronan blends global football knowledge with a local,
+                player-first approach.
+            </p>
+            <Image
+                src={RonanImage}
+                alt="Ronan, Central Coast Soccer Coach"
+                class="ronan-image"
+            />
+            <p>
+                Backed by a background in sports science, Ronan’s sessions focus
+                on technical skills, football IQ, physical development and
+                confidence. He currently coaches at Terrigal FC and the Terrigal
+                Development Centre, working with players from beginners right
+                through to rep level.
+            </p>
+            <p>
+                Ronan believes in more than just drills. He believes in building
+                footballers who love the game, think fast and play with purpose.
+            </p>
+        </div>
+
+        <div class="certifications">
+            <h3>Certifications and Coaching Experience</h3>
+            <p>
+                Ronan brings a wealth of knowledge to every session, backed by
+                both formal qualifications and years of hands-on coaching. His
+                background in sports science and football development ensures
+                every player gets the right balance of skill, strength and
+                smarts.
+            </p>
+
+            <ul>
+                <li>
+                    <CertIcon class="icon" />Bachelor of Sports Science
+                </li>
+                <li>
+                    <CertIcon class="icon" />FFA C Licence (Working toward B
+                    Licence)
+                </li>
+                <li>
+                    <CertIcon class="icon" />Over 10 years coaching experience
+                    across Australia, Europe and Asia
+                </li>
+                <li>
+                    <CertIcon class="icon" />Head Coach at Terrigal FC and
+                    Terrigal Development Centre
+                </li>
+                <li>
+                    <CertIcon class="icon" />Experience in youth development,
+                    strength and conditioning, and 1v1 technical training
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark);
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .coach-ronan {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    .ronan-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .certifications {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-weight: bold;
+    }
+    .icon {
+        min-width: 35px;
+        min-height: 35px;
+    }
+</style>

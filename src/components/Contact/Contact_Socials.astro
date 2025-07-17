@@ -1,0 +1,66 @@
+---
+import Instagram from "@icons/instagram-black.svg";
+import Youtube from "@icons/youtube-black.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Follow Soccer Everyday Academy on Instagram and YouTube</h2>
+        <p>
+            Want to see our coaching in action? Follow us on social media for
+            drills, match highlights, training tips and behind-the-scenes
+            moments from the pitch. Whether you're a parent, player or coach,
+            you'll get a real feel for how we train and what we stand for.
+        </p>
+
+        <div class="links">
+            <div class="link-card">
+                <Instagram />
+                <a href="/">@soccereverydayacademy</a>
+                <p>
+                    See daily stories, training clips and player progress
+                    updates.
+                </p>
+            </div>
+
+            <div class="link-card">
+                <Youtube />
+                <a href="/">Soccer Everyday Academy on YouTube</a>
+                <p>
+                    Watch full sessions, coaching tips and football content made
+                    for players and coaches on the rise.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        background-color: var(--dark);
+        color: white;
+        padding: 1rem 1rem 0.8rem 1rem;
+        font-size: 2em;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .link-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+</style>

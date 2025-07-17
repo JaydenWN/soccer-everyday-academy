@@ -1,7 +1,17 @@
 ---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import ContactContactForm from "../components/Contact/Contact_ContactForm.astro";
+import ContactDirect from "../components/Contact/Contact_Direct.astro";
+import ContactSocials from "../components/Contact/Contact_Socials.astro";
 import Layout from "../layouts/Base_Layout.astro";
 ---
 
 <Layout title="Contact" description="Lorem ipsum dolor sit amet">
-    <h1>Contact</h1>
+    <SubpageHero
+        title="Get in Touch with Soccer Every Day Academy"
+        text="Want to chat about private soccer training or book in a clinic? Keen to get your kid into our next school holiday session? You’re in the right place. Whether it’s 1v1 coaching, small group training or strength and conditioning, we’re here to help you take your game to the next level. Reach out today and let’s get the ball rolling."
+    />
+    <ContactContactForm />
+    <ContactDirect />
+    <ContactSocials />
 </Layout>

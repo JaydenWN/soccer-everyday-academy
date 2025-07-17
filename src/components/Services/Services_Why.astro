@@ -1,0 +1,56 @@
+---
+import TickYellow from "@icons/tick-yellow.svg";
+import TickBlack from "@icons/tick-black.svg";
+
+export interface Props {
+    whyArray: {
+        title: string;
+        text: string;
+    }[];
+    variant?: "dark" | "light";
+}
+const { whyArray, variant = "dark" } = Astro.props;
+
+const className = `why-list list-${variant}`;
+---
+
+<div class={className}>
+    {
+        whyArray.map((reason) => (
+            <div class="reason">
+                {variant === "dark" ? (
+                    <TickYellow class="icon" />
+                ) : (
+                    <TickBlack class="icon" />
+                )}
+                <h4>{reason.title}</h4>
+                <p>{reason.text}</p>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .why-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .list-dark {
+        color: white;
+    }
+    .reason {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    h4 {
+        font-size: 1.2em;
+    }
+    .icon {
+        width: 38px;
+        height: auto;
+    }
+</style>

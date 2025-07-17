@@ -1,0 +1,76 @@
+---
+import Tick from "@icons/tick-line-black.svg";
+import PrimaryButton from "../common/Primary_Button.astro";
+import contactIcon from "@icons/contact-black.svg";
+
+const { title, list } = Astro.props;
+---
+
+<div class="price-card">
+    <h2>{title}</h2>
+    <div class="price-section">
+        <slot />
+    </div>
+    <ul class="list-section">
+        {
+            list.map((reason) => (
+                <li>
+                    <Tick class="icon" /> {reason}
+                </li>
+            ))
+        }
+    </ul>
+    <div class="card-footer">
+        <PrimaryButton
+            link="/contact"
+            text="Book a session"
+            icon={contactIcon}
+            variant="yellow"
+        />
+    </div>
+</div>
+
+<style>
+    .price-card {
+        border: 2px solid var(--dark);
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    h2 {
+        background-color: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        font-size: 2em;
+    }
+    .price-section {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0px;
+    }
+    .list-section {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        padding: 4rem;
+        background-color: var(--grey);
+    }
+    .list-section li {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.1em;
+        line-height: 160%;
+        align-items: center;
+    }
+    .card-footer {
+        background-color: var(--grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0px;
+    }
+    .icon {
+        min-width: 25px;
+    }
+</style>

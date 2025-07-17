@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import serviceImage from "@images/central-coast-soccer-coach-training.webp";
+import ServicesCTA from "./Services_CTA.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="text-section">
+            <h2>
+                Soccer Coach Courses on the Central Coast, From Beginner to
+                Performance
+            </h2>
+            <p>
+                Our Soccer Coach Courses are built for aspiring and developing
+                coaches who want to lead with confidence and purpose. Whether
+                you're new to coaching or looking to sharpen your methods, we
+                cover everything from planning sessions to applying tactics and
+                building strong team culture.
+            </p>
+            <p>
+                Backed by a postgraduate qualification in Football Academy and
+                real-world coaching experience across multiple continents, these
+                courses blend theory with practice. You'll learn how to coach
+                with structure, adapt to different player needs, and bring the
+                best out of your team.
+            </p>
+        </div>
+
+        <Image
+            src={serviceImage}
+            alt="1v1 soccer training central coast"
+            class="service-image"
+        />
+
+        <div class="why-section">
+            <h3>Why Learn With Soccer Everyday Academy</h3>
+            <ServicesWhy
+                whyArray={[
+                    {
+                        title: "Built by a Coach Who’s Done It All",
+                        text: "Our head coach has coached youth, seniors and development squads across the globe. What you’ll learn comes from real experience, not just the textbooks.",
+                    },
+                    {
+                        title: "Focus on Practical Application",
+                        text: "We don’t just talk about drills. We show you how to run them, tweak them, and make them effective for different age groups and skill levels.",
+                    },
+                    {
+                        title: "Grow Your Confidence and Leadership",
+                        text: "These courses are built to help you lead from the front. You’ll walk away with tools, strategies and a clear plan to run effective, engaging sessions.",
+                    },
+                ]}
+            />
+        </div>
+        <div class="cta-section">
+            <ServicesCTA
+                title="Start Your Coaching Journey Today"
+                text="Enquire now and learn how to coach with clarity, structure and passion from someone who lives the game every day."
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark);
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .service-image {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .cta-section {
+        margin-top: 2rem;
+    }
+</style>

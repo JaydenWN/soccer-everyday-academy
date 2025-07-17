@@ -1,0 +1,34 @@
+---
+import ContactForm from "../common/Contact_Form.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>
+            Let’s Kick Things Off! Get in Touch With Soccer Everyday Academy
+        </h2>
+        <p>
+            Got a question about our soccer training sessions? Looking to book a
+            free trial or lock in your spot for the next clinic? Fill out the
+            form below and we’ll get back to you quick smart. We work with
+            players of all levels across Sydney and beyond. Whether it’s private
+            coaching, small group sessions or holiday programs – we’re here to
+            help you or your child level up.
+        </p>
+        <ContactForm />
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-size: 2em;
+        background-color: var(--dark);
+        color: white;
+        padding: 1rem 1rem 0.8rem 1rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

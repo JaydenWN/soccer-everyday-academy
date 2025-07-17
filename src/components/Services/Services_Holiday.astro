@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import serviceImage from "@images/football-clinic-central-coast.webp";
+import ServicesCTA from "./Services_CTA.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="text-section">
+            <h2>School Holiday Football Clinics on the Central Coast</h2>
+            <p>
+                Our school holiday football clinics are a fun and focused way
+                for kids and teens to stay active, sharpen their skills and
+                build confidence during the break. These clinics combine
+                structured training with games, challenges and team play.
+            </p>
+            <p>
+                Led by an experienced and fully certified coach, players get
+                high-quality coaching in a supportive environment. Whether your
+                child is new to the game or plays regularly, they'll walk away
+                with new skills, new mates and a stronger love for football.
+            </p>
+        </div>
+
+        <Image
+            src={serviceImage}
+            alt="1v1 soccer training central coast"
+            class="service-image"
+        />
+
+        <div class="why-section">
+            <h3>Why Join a Soccer Everyday Academy Holiday Clinic</h3>
+            <ServicesWhy
+                whyArray={[
+                    {
+                        title: "High-Energy and Skill-Focused",
+                        text: "We pack each clinic with activities that keep players moving, thinking and improving. It’s the perfect balance of learning and fun.",
+                    },
+                    {
+                        title: "Safe and Supportive Environment",
+                        text: "All clinics are run by a qualified coach with First Aid and Working With Children certifications. You can trust your kids are in good hands.",
+                    },
+                    {
+                        title: "Great Value for Families",
+                        text: "Our clinics offer hours of quality football coaching at an affordable price, making them a great option for active kids on school holidays.",
+                    },
+                ]}
+            />
+        </div>
+        <div class="cta-section">
+            <ServicesCTA
+                title="Keep the Ball Rolling These Holidays"
+                text="Register your child for our next football clinic and let them enjoy a holiday full of football, fun and growth on the pitch."
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark);
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .service-image {
+        width: 100%;
+        height: auto;
+    }
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    .cta-section {
+        margin-top: 2rem;
+    }
+</style>
