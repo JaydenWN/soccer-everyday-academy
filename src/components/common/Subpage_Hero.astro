@@ -40,4 +40,14 @@ const { title, text } = Astro.props;
     h1 {
         font-size: 3rem;
     }
+
+    @media (min-width: 1440px) {
+        h1,
+        p {
+            width: 50%;
+        }
+        h1 {
+            font-size: 4em;
+        }
+    }
 </style>

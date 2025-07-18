@@ -111,9 +111,57 @@ import RonanImage from "@images/central-coast-soccer-coach-training.webp";
         align-items: center;
         gap: 2rem;
         font-weight: bold;
+        line-height: 165%;
     }
     .icon {
         min-width: 35px;
         min-height: 35px;
+    }
+
+    @media (min-width: 768px) {
+        .coach-ronan {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        h2 {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .ronan-image {
+            grid-area: 2 / 1 / 2 / 2;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 4rem;
+        }
+        h3 {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .coach-ronan {
+            gap: 4rem;
+        }
+        .ronan-image {
+            aspect-ratio: 1 / 1;
+            width: 1fr;
+            height: auto;
+        }
+        .certifications {
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .coach-ronan {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 2rem;
+        }
+        h2 {
+            grid-area: 1 / 1 / 2 / 5;
+            text-align: center;
+        }
     }
 </style>

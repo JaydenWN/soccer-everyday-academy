@@ -70,4 +70,36 @@ import Email from "@icons/email-black.svg";
     h2 {
         font-size: 2em;
     }
+
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        .contact-options {
+            flex-direction: row;
+        }
+        .contact-card {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        h2 {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+        .contact-options {
+            grid-area: 2 / 2 / 3 / 4;
+        }
+        .contact-solid {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .contact-card {
+            width: 300px;
+        }
+    }
 </style>

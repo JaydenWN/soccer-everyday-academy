@@ -53,4 +53,37 @@ const className = `why-list list-${variant}`;
         width: 38px;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        .reason {
+            border: 1px solid var(--grey);
+            box-sizing: border-box;
+            padding: 1rem;
+            width: calc(50% - 1rem);
+        }
+        .why-list {
+            gap: 2rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .why-list {
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+        .reason {
+            width: calc(50% - 2rem);
+            padding: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .why-list {
+            justify-content: start;
+            gap: 2rem;
+        }
+    }
 </style>

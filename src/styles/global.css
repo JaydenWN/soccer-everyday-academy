@@ -183,6 +183,9 @@ strong{
 }
 
 @media (min-width: 1440px) {
+	p{
+		font-size: 1.1em;
+	}
 	.container {
 		width: 1280px;
 		margin: 0px auto;

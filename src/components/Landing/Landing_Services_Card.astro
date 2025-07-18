@@ -27,6 +27,9 @@ const { title, text, ctaText, image } = Astro.props;
         flex-direction: column;
         background-color: var(--dark);
         color: white;
+        box-shadow:
+            rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+            rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     }
     .text-content {
         display: flex;
@@ -51,6 +54,9 @@ const { title, text, ctaText, image } = Astro.props;
             width: calc(50% - 1rem);
             box-sizing: border-box;
         }
+        .image {
+            height: fit-content;
+        }
         .text-content {
             padding: 2rem;
         }
@@ -69,6 +75,25 @@ const { title, text, ctaText, image } = Astro.props;
         }
         .text-content {
             padding: 3rem;
+        }
+    }
+    @media (min-width: 1440px) {
+        .service-card {
+            flex-direction: column;
+            width: calc(33% - 1rem);
+            margin: 0px;
+        }
+        .image {
+            height: auto;
+            width: 100%;
+            aspect-ratio: 1/1;
+        }
+        .text-content {
+            padding: 3rem;
+            height: 100%;
+        }
+        .text-content :global(a) {
+            margin-top: auto;
         }
     }
 </style>

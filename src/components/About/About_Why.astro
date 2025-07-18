@@ -12,7 +12,7 @@ import contactIcon from "@icons/contact-black.svg";
             Why Choose Soccer Every Day Academy For Central Coast Football
             Training
         </h2>
-        <p>
+        <p class="intro">
             We’re not just running drills. We’re building footballers. At Soccer
             Every Day Academy, we focus on long-term development, not quick
             wins. Every player gets the time, attention and coaching they need
@@ -111,5 +111,44 @@ import contactIcon from "@icons/contact-black.svg";
         display: flex;
         gap: 1rem;
         margin-top: 4rem;
+    }
+
+    @media (min-width: 768px) {
+        .reason {
+            padding: 2rem;
+            box-shadow:
+                rgba(255, 255, 255, 0.1) 0px 0px 5px 0px,
+                rgba(255, 255, 255, 0.1) 0px 0px 1px 0px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .why-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .reason {
+            flex-direction: column;
+            align-items: center;
+        }
+        .reason h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .tick-icon {
+            width: 50px;
+            height: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        .intro {
+            width: 65%;
+            text-align: center;
+            margin: 0px auto;
+        }
+        .container {
+            gap: 4rem;
+        }
     }
 </style>

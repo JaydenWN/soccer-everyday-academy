@@ -63,4 +63,41 @@ import Youtube from "@icons/youtube-black.svg";
         color: black;
         font-weight: bold;
     }
+
+    @media (min-width: 768px) {
+        .link-card {
+            padding: 1rem;
+            box-shadow:
+                rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+                rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .links {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .link-card {
+            padding: 2rem;
+        }
+        .container {
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        p {
+            max-width: 60%;
+            margin: 0px auto;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
 </style>

@@ -73,4 +73,23 @@ const { title, list } = Astro.props;
     .icon {
         min-width: 25px;
     }
+
+    @media (min-width: 768px) {
+        .price-card {
+            width: calc(50% - 0.5rem);
+        }
+        .list-section {
+            padding: 2rem;
+        }
+        .card-footer {
+            height: 100%;
+            align-items: end;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .price-card {
+            width: 100%;
+        }
+    }
 </style>

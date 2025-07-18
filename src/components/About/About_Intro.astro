@@ -5,13 +5,13 @@ import Triangle from "@icons/triangle-yellow.svg";
 <section>
     <div class="container">
         <h2>Soccer Coaching with Purpose</h2>
-        <p class="p-block">
+        <p class="p-block text">
             Soccer Every Day Academy was built to give every player the chance
             to grow. Whether you’re kicking a ball for the first time or chasing
             a higher level of performance, we offer coaching that’s tailored,
             professional and built for long-term development.
         </p>
-        <p class="p-block">
+        <p class="p-block text">
             Our head coach brings experience from working across multiple
             continents, combining football knowledge with a background in sports
             science. We now work closely with Terrigal FC and Terrigal
@@ -58,5 +58,46 @@ import Triangle from "@icons/triangle-yellow.svg";
     }
     h3 {
         font-size: 1.5rem;
+    }
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        .text {
+            background-color: var(--grey);
+            padding: 2rem;
+        }
+        .mission {
+            padding: 2rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            display: grid;
+            column-gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+        }
+        h2 {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .mission {
+            grid-area: 3 / 1 / 4 / 3;
+            padding: 3rem;
+            gap: 3rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .container {
+            padding: 8rem 0px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        h2 {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+        .mission {
+            grid-area: auto;
+        }
     }
 </style>

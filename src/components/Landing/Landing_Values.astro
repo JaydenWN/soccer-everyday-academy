@@ -107,7 +107,15 @@ import valueIcon3 from "@icons/value-purpose.svg";
         .value {
             width: calc(50% - 2rem);
             box-sizing: border-box;
+            box-shadow:
+                rgba(255, 255, 255, 0.1) 0px 0px 5px 0px,
+                rgba(255, 255, 255, 0.1) 0px 0px 1px 0px;
+            padding: 1rem;
         }
+        .value-image {
+            align-self: start;
+        }
+
         .value p {
             width: auto;
         }
@@ -118,6 +126,12 @@ import valueIcon3 from "@icons/value-purpose.svg";
         }
         .container {
             gap: 6rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .value {
+            padding: 2rem;
         }
     }
 </style>
