@@ -1,0 +1,59 @@
+---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import ContactContactForm from "../components/Contact/Contact_ContactForm.astro";
+import ContactDirect from "../components/Contact/Contact_Direct.astro";
+import ContactSocials from "../components/Contact/Contact_Socials.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Contact SEA | Soccer Coaching Central Coast"
+    description="Ready to train? Reach out to Soccer Every Day Academy for personal football coaching, group sessions, clinics and more. Based on the Central Coast."
+>
+    <script type="application/ld+json" slot="head">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Contact Soccer Every Day Academy",
+            "url": "https://www.soccereverydayacademy.com/contact-soccer-every-day-academy",
+            "description": "Get in touch with Soccer Every Day Academy. Enquire about 1v1 soccer training, small group sessions, or school holiday clinics across the Central Coast.",
+            "about": {
+                "@type": "LocalBusiness",
+                "name": "Soccer Every Day Academy",
+                "logo": "https://www.soccereverydayacademy.com/logo.png",
+                "url": "https://www.soccereverydayacademy.com",
+                "telephone": "0432 275 674",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Long Jetty",
+                    "postalCode": "2261",
+                    "addressCountry": "AU"
+                },
+                "areaServed": [
+                    { "@type": "Place", "name": "Terrigal NSW" },
+                    { "@type": "Place", "name": "Erina NSW" },
+                    { "@type": "Place", "name": "Bateau Bay NSW" },
+                    { "@type": "Place", "name": "The Entrance NSW" }
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "0432 275 674",
+                    "contactType": "Customer Service",
+                    "availableLanguage": ["English", "Brazilian"],
+                    "areaServed": "AU"
+                },
+                "sameAs": [
+                    "https://www.instagram.com/soccer_everyday_academy/",
+                    "https://www.youtube.com/@soccereverydayacademy"
+                ]
+            }
+        }
+    </script>
+    <SubpageHero
+        title="Get in Touch with Soccer Every Day Academy"
+        text="Want to chat about private soccer training or book in a clinic? Keen to get your kid into our next school holiday session? You’re in the right place. Whether it’s 1v1 coaching, small group training or strength and conditioning, we’re here to help you take your game to the next level. Reach out today and let’s get the ball rolling."
+    />
+    <ContactContactForm />
+    <ContactDirect />
+    <ContactSocials />
+</Layout>

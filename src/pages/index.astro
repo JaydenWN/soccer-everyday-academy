@@ -12,9 +12,68 @@ import Layout from "../layouts/Base_Layout.astro";
 ---
 
 <Layout
-	title="Soccer Everyday Academy"
-	description="Lorem ipsum dolor sit amet"
+	title="Soccer Training Central Coast | Soccer Every Day Academy"
+	description="From beginners to advanced, SEA offers personal coaching, 1v1 training, small groups and school holiday clinics on the Central Coast. Start your football journey today."
 >
+	<script type="application/ld+json" slot="head">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Soccer Everyday Academy",
+			"description": "Soccer Everyday Academy offers personal football coaching, 1v1 training, small group sessions, school holiday clinics and strength and conditioning on the Central Coast of NSW.",
+			"image": "https://soccereverydayacademy.com/central-coast-soccer-training",
+			"logo": "https://soccereverydayacademy.com/logo.png",
+			"@id": "http://www.soccereverydayacademy.com",
+			"url": "http://www.soccereverydayacademy.com",
+			"telephone": "0432 275 674",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "",
+				"addressLocality": "Long Jetty",
+				"postalCode": "2261",
+				"addressCountry": "au"
+			},
+			"priceRange": "$",
+			"sameAs": [
+				"https://www.instagram.com/soccer_everyday_academy/",
+				"https://www.youtube.com/@soccereverydayacademy"
+			],
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": [
+						"Monday",
+						"Tuesday",
+						"Wednesday",
+						"Thursday",
+						"Friday",
+						"Saturday",
+						"Sunday"
+					],
+					"opens": "06:00",
+					"closes": "19:00"
+				}
+			],
+			"areaServed": [
+				{ "@type": "Place", "name": "Terrigal NSW" },
+				{ "@type": "Place", "name": "Long Jetty NSW" },
+				{ "@type": "Place", "name": "The Entrance NSW" },
+				{ "@type": "Place", "name": "Bateau Bay NSW" },
+				{ "@type": "Place", "name": "Wamberal NSW" },
+				{ "@type": "Place", "name": "Erina NSW" },
+				{ "@type": "Place", "name": "Killarney Vale NSW" },
+				{ "@type": "Place", "name": "Tumbi Umbi NSW" },
+				{ "@type": "Place", "name": "Gosford NSW" },
+				{ "@type": "Place", "name": "Woy Woy NSW" },
+				{ "@type": "Place", "name": "Avoca Beach NSW" },
+				{ "@type": "Place", "name": "Copacabana NSW" },
+				{ "@type": "Place", "name": "Umina Beach NSW" },
+				{ "@type": "Place", "name": "Forresters Beach NSW" },
+				{ "@type": "Place", "name": "North Avoca NSW" }
+			]
+		}
+	</script>
+
 	<LandingHero1 />
 	<LandingMeet />
 	<LandingValues />

@@ -1,0 +1,98 @@
+---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import Services1V1 from "../components/Services/Services_1v1.astro";
+import ServicesCoach from "../components/Services/Services_Coach.astro";
+import ServicesGroup from "../components/Services/Services_Group.astro";
+import ServicesIntro from "../components/Services/Services_Intro.astro";
+import ServicesStrength from "../components/Services/Services_Strength.astro";
+import ServicesHoliday from "../components/Services/Services_Holiday.astro";
+import ServicesContact from "../components/Services/Services_Contact.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Soccer Coaching Services | SEA Central Coast"
+    description="SEA offers tailored football training including personal coaching, small groups, 1v1, strength and conditioning, and school holiday football clinics. All levels welcome."
+>
+    <script type="application/ld+json" slot="head">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Soccer Every Day Academy",
+            "url": "https://www.soccereverydayacademy.com/football-coaching-services-central-coast",
+            "logo": "https://www.soccereverydayacademy.com/logo.png",
+            "description": "Soccer Every Day Academy offers personal football training, 1v1 coaching, small group sessions, strength and conditioning, school holiday programs and clinics across the Central Coast.",
+            "priceRange": "$",
+            "telephone": "0432 275 674",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Long Jetty",
+                "postalCode": "2261",
+                "addressCountry": "AU"
+            },
+            "areaServed": [
+                { "@type": "Place", "name": "Terrigal NSW" },
+                { "@type": "Place", "name": "Long Jetty NSW" },
+                { "@type": "Place", "name": "Erina NSW" },
+                { "@type": "Place", "name": "Bateau Bay NSW" }
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Football Coaching Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "1-on-1 Soccer Coaching",
+                            "description": "Focused 1v1 football training to improve individual technique, confidence, and decision-making."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Small Group Football Training",
+                            "description": "High quality small group sessions developing tactical play, teamwork and game awareness."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Strength and Conditioning for Football",
+                            "description": "Football-specific strength and fitness programs designed to build power, speed, and injury prevention."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "School Holiday Football Clinics",
+                            "description": "Fun and challenging school holiday soccer clinics for juniors of all skill levels across the Central Coast."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Beginner Football Programs",
+                            "description": "Friendly and supportive programs for kids new to soccer, focused on building skills and love for the game."
+                        }
+                    }
+                ]
+            }
+        }
+    </script>
+    <SubpageHero
+        title="Soccer Coaching Services on the Central Coast"
+        text="Soccer Everyday Academy delivers expert football training for kids, teens and adults across the Central Coast. From 1-on-1 coaching to strength and conditioning, our services are designed to help every player build confidence, improve skills and love the game. Whether you're just starting out or chasing performance, we’ve got a session to suit."
+    />
+    <ServicesIntro />
+    <Services1V1 />
+    <ServicesGroup />
+    <ServicesCoach />
+    <ServicesStrength />
+    <ServicesHoliday />
+    <ServicesContact />
+</Layout>

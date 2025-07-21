@@ -1,0 +1,88 @@
+---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import PricingListChildren from "../components/Pricing/Pricing_List_Children.astro";
+import PricingListAdults from "../components/Pricing/Pricing_List_Adults.astro";
+import PricingContact from "../components/Pricing/Pricing_Contact.astro";
+
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Soccer Training Prices | SEA Central Coast"
+    description="Explore SEA’s coaching prices for 1-on-1 sessions, small group training, strength programs and school holiday football clinics. Affordable and professional coaching."
+>
+    <script type="application/ld+json" slot="head">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Soccer Training Prices | SEA Central Coast",
+            "url": "https://www.soccereverydayacademy.com/football-training-prices-central-coast",
+            "description": "View pricing for Soccer Every Day Academy's 1-on-1 coaching, small group sessions, strength and conditioning, and school holiday football clinics across the Central Coast.",
+            "about": {
+                "@type": "LocalBusiness",
+                "name": "Soccer Every Day Academy",
+                "url": "https://www.soccereverydayacademy.com",
+                "logo": "https://www.soccereverydayacademy.com/logo.png",
+                "telephone": "0432 275 674",
+                "priceRange": "$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Long Jetty",
+                    "postalCode": "2261",
+                    "addressCountry": "AU"
+                },
+                "areaServed": [
+                    { "@type": "Place", "name": "Terrigal NSW" },
+                    { "@type": "Place", "name": "Long Jetty NSW" },
+                    { "@type": "Place", "name": "Erina NSW" },
+                    { "@type": "Place", "name": "Bateau Bay NSW" }
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Soccer Coaching Price List",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "1-on-1 Soccer Coaching",
+                                "description": "Focused personal coaching designed to improve technical and tactical football skills."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Small Group Soccer Training",
+                                "description": "Shared sessions for groups looking to build teamwork, awareness and game fitness."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Strength and Conditioning for Soccer",
+                                "description": "Football-specific physical training for strength, speed, agility and injury prevention."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "School Holiday Soccer Clinics",
+                                "description": "Fun and high-energy football programs during NSW school holidays for all ability levels."
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    </script>
+    <SubpageHero
+        title="Soccer Training That Fits Your Goals and Budget"
+        text="At Soccer Everyday Academy, we offer reasonable pricing across 1v1 sessions, small group training, and strength and conditioning. Whether you're just starting out or looking to take your game to the next level, we've got a program built for you."
+    />
+    <PricingListChildren />
+    <PricingListAdults />
+    <PricingContact />
+</Layout>

@@ -42,6 +42,11 @@ const className = `btn btn--${variant}`;
     .btn--default {
         background-color: var(--dark);
         color: white;
+        transition: background-color 0.25s ease;
+    }
+
+    .btn--default:hover {
+        background-color: #000000;
     }
 
     /* “dark” == e.g. very dark gray bg, light gray text */
@@ -49,7 +54,10 @@ const className = `btn btn--${variant}`;
         background-color: var(--yellow);
         color: var(--dark);
         border: 1px solid var(--yellow);
+        transition: background-color 0.25s ease;
     }
 
-    /* (you can of course tweak the colors to taste) */
+    .btn--yellow:hover {
+        background-color: rgb(253, 246, 149);
+    }
 </style>

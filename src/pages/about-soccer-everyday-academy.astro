@@ -1,0 +1,61 @@
+---
+import AboutCoach from "../components/About/About_Coach.astro";
+import AboutIntro from "../components/About/About_Intro.astro";
+import AboutTestimonials from "../components/About/About_Testimonials.astro";
+import AboutWhy from "../components/About/About_Why.astro";
+import AboutContact from "../components/About/About_Contact.astro";
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+	title="About SEA | Football Development Central Coast"
+	description="Founded by a passionate coach with international experience, SEA delivers high quality football training focused on skill, strength and development for all levels."
+>
+	<script type="application/ld+json" slot="head">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Soccer Every Day Academy",
+			"url": "https://www.soccereverydayacademy.com/about-soccer-everyday-academy",
+			"logo": "https://www.soccereverydayacademy.com/logo.png",
+			"description": "Soccer Every Day Academy is a Central Coast-based football coaching program offering personal training, 1v1 development, small group sessions and holiday clinics. Founded by Ronan, an experienced coach with a background in Brazilian football and sports science.",
+			"founder": {
+				"@type": "Person",
+				"name": "Ronan Vizeu",
+				"description": "Ronan is the founder and head coach of Soccer Every Day Academy. He brings global experience in football and a passion for developing players of all skill levels.",
+				"jobTitle": "Head Coach"
+			},
+			"sameAs": [
+				"https://www.instagram.com/soccer_everyday_academy/",
+				"https://www.youtube.com/@soccereverydayacademy"
+			],
+			"areaServed": [
+				{ "@type": "Place", "name": "Terrigal NSW" },
+				{ "@type": "Place", "name": "Long Jetty NSW" },
+				{ "@type": "Place", "name": "The Entrance NSW" },
+				{ "@type": "Place", "name": "Bateau Bay NSW" },
+				{ "@type": "Place", "name": "Wamberal NSW" },
+				{ "@type": "Place", "name": "Erina NSW" },
+				{ "@type": "Place", "name": "Killarney Vale NSW" },
+				{ "@type": "Place", "name": "Tumbi Umbi NSW" },
+				{ "@type": "Place", "name": "Gosford NSW" },
+				{ "@type": "Place", "name": "Woy Woy NSW" },
+				{ "@type": "Place", "name": "Avoca Beach NSW" },
+				{ "@type": "Place", "name": "Copacabana NSW" },
+				{ "@type": "Place", "name": "Umina Beach NSW" },
+				{ "@type": "Place", "name": "Forresters Beach NSW" },
+				{ "@type": "Place", "name": "North Avoca NSW" }
+			]
+		}
+	</script>
+	<SubpageHero
+		title="About Soccer Every Day Academy, The Central Coast Football Training Experts"
+		text="At Soccer Every Day Academy, we’re passionate about building better footballers from the ground up. With personal training, 1v1 sessions, small groups, strength and conditioning, and school holiday clinics, our programs are built for real growth. Backed by years of experience across Australia and beyond, we now bring elite football coaching to the Central Coast."
+	/>
+	<AboutIntro />
+	<AboutCoach />
+	<AboutTestimonials />
+	<AboutWhy />
+	<AboutContact />
+</Layout>
