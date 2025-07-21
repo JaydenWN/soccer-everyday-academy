@@ -1,6 +1,7 @@
 ---
 import SubpageHero from "../components/common/Subpage_Hero.astro";
-import PricingList from "../components/Pricing/Pricing_List.astro";
+import PricingListChildren from "../components/Pricing/Pricing_List_Children.astro";
+import PricingListAdults from "../components/Pricing/Pricing_List_Adults.astro";
 import PricingContact from "../components/Pricing/Pricing_Contact.astro";
 
 import Layout from "../layouts/Base_Layout.astro";
@@ -11,6 +12,7 @@ import Layout from "../layouts/Base_Layout.astro";
         title="Soccer Training That Fits Your Goals and Budget"
         text="At Soccer Everyday Academy, we offer reasonable pricing across 1v1 sessions, small group training, and strength and conditioning. Whether you're just starting out or looking to take your game to the next level, we've got a program built for you."
     />
-    <PricingList />
+    <PricingListChildren />
+    <PricingListAdults />
     <PricingContact />
 </Layout>

@@ -1,0 +1,106 @@
+---
+import PricingCard from "./Pricing_Card.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>Soccer Classes for Kids (10+)</h2>
+        <div class="pricing-cards">
+            <PricingCard
+                title="1v1 Personal Training"
+                list={[
+                    "Strength",
+                    "Mobility",
+                    "Nutrition",
+                    "Mobility",
+                    "Complete Evaluation",
+                    "75 Minute Session",
+                ]}
+            >
+                <p><strong>$75 Per Hour</strong></p>
+                <p>or</p>
+                <p><strong>8 Sessions for $480</strong></p>
+            </PricingCard>
+
+            <PricingCard
+                title="Small Group Package"
+                list={[
+                    "Strength",
+                    "Mobility",
+                    "Nutrition",
+                    "Mobility",
+                    "Complete Evaluation",
+                    "75 Minute Session",
+                ]}
+            >
+                <p><strong>$325</strong></p>
+                <p>1 Day / (8 Weeks)</p>
+                <p><strong>$555</strong></p>
+                <p>2 Days / (8 Weeks)</p>
+                <small>Max 4 People. Min 8 Weeks.</small>
+            </PricingCard>
+
+            <PricingCard
+                title="Strength & Conditioning"
+                list={[
+                    "4 People Sessions",
+                    "Speed",
+                    "Agility",
+                    "Core",
+                    "Boost Performance",
+                    "75 Minute Session",
+                ]}
+            >
+                <p><strong>$325</strong></p>
+                <p>1 Day / (8 Weeks)</p>
+                <p><strong>$555</strong></p>
+                <p>2 Days / (8 Weeks)</p>
+            </PricingCard>
+
+            <PricingCard
+                title="Holiday football clinics"
+                list={[
+                    "Small Groups",
+                    "Skills-Based Drills",
+                    "Game Scenarios",
+                    "Tactical Awareness",
+                    "Build Confidence",
+                ]}
+            >
+                <p><strong>Contact For Pricing</strong></p>
+            </PricingCard>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        text-align: center;
+        background-color: var(--grey);
+        padding: 1rem 1rem 0.8rem 1rem;
+        font-size: 2em;
+    }
+    @media (min-width: 768px) {
+        .pricing-cards {
+            gap: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    @media (min-width: 1440px) {
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+</style>
