@@ -1,26 +1,26 @@
 ---
 import { Image } from "astro:assets";
 import ServicesWhy from "./Services_Why.astro";
-import serviceImage from "@images/soccer-strength-training-sea.jpg";
+import serviceImage from "@images/45-personal-training.jpg";
 import ServicesCTA from "./Services_CTA.astro";
 ---
 
 <section>
     <div class="container">
         <div class="text-section">
-            <h2>Adult Personal Training Mobility and Strength</h2>
+            <h2>Personal Training for Over 45's on the Central Coast</h2>
             <p>
-                Our Personal strength and conditioning sessions are built
-                specifically for footballers. We focus on developing speed,
-                agility, power and endurance – all the physical tools needed to
-                perform better and stay injury-free on the pitch.
+                Our personal training sessions for over 45’s are built to help
+                you move better, feel stronger and stay active without the
+                stress of a crowded gym. These sessions are tailored to your
+                current fitness level, goals and any past injuries.
             </p>
             <p>
-                Led by a qualified personal trainer with a Sports Science
-                degree, these sessions are grounded in proven athletic
-                development principles. Whether you're looking to build your
-                base fitness or get an edge before the season, we’ll tailor a
-                program to suit your level and goals.
+                You’ll work 1-on-1 with an experienced and qualified coach who
+                understands the importance of mobility, strength, and injury
+                prevention at this stage of life. Whether you're getting back
+                into fitness or looking to maintain performance, our sessions
+                are all about progress at your pace.
             </p>
         </div>
 
@@ -31,43 +31,36 @@ import ServicesCTA from "./Services_CTA.astro";
         />
 
         <div class="why-section">
-            <h3>
-                Why Train with Soccer Everyday Academy for Strength and
-                Conditioning
-            </h3>
+            <h3>Why Train with Soccer Everyday Academy</h3>
             <ServicesWhy
-                variant="dark"
+                variant="light"
                 whyArray={[
                     {
-                        title: "Football-Specific Focus",
-                        text: "Every movement, drill and rep is designed with football in mind. We’re not running generic gym programs. We build athletes for the demands of the game.",
+                        title: "Tailored for You",
+                        text: "We don’t use cookie-cutter programs. Every session is personalised to suit your body, lifestyle and goals.",
                     },
                     {
-                        title: "Qualified Sports Science Coach",
-                        text: "Train with someone who understands how the body works and what footballers need. With both academic knowledge and on-field experience, we bridge the gap between gym and pitch.",
+                        title: "Focus on Strength, Mobility and Longevity",
+                        text: "Sessions help you move better in day-to-day life, improve core strength, and reduce risk of injury as you age.",
                     },
                     {
-                        title: "Programs for All Levels",
-                        text: "Whether you're just getting started or already competing, we’ll match the training to your ability and progression. No fluff, just real physical development that translates to game day.",
+                        title: "Comfortable, Encouraging Setting",
+                        text: "Train without the pressure of a gym. The sessions we offer are private, respectful and designed to make you feel confident in your training.",
                     },
                 ]}
             />
         </div>
         <div class="cta-section">
             <ServicesCTA
-                title="Get Stronger. Get Fitter. Play Better."
-                text="Book your football conditioning session now and start building the engine you need to perform at your best."
-                variant="light"
+                variant="dark"
+                title="Strong Body, Clear Mind – PT at SEA"
+                text="Get in touch and book your first session. Train with purpose and build a stronger version of yourself – one session at a time."
             />
         </div>
     </div>
 </section>
 
 <style>
-    section {
-        background-color: var(--dark);
-        color: white;
-    }
     .container {
         display: flex;
         flex-direction: column;
@@ -82,9 +75,7 @@ import ServicesCTA from "./Services_CTA.astro";
     }
     .service-image {
         width: 100%;
-        height: 360px;
-        object-fit: cover;
-        object-position: top;
+        height: auto;
     }
     .text-section {
         display: flex;
@@ -100,7 +91,6 @@ import ServicesCTA from "./Services_CTA.astro";
     .cta-section {
         margin-top: 2rem;
     }
-
     @media (min-width: 768px) {
         .text-section {
             grid-area: 1 / 1 / 2 / 3;

@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import placeholder from "@images/central-coast-soccer-coach.webp";
+import coachImage from "@images/central-coast-soccer-coach.webp";
 import Triangle from "@icons/triangle-yellow.svg";
 ---
 
@@ -19,7 +19,11 @@ import Triangle from "@icons/triangle-yellow.svg";
             Certificate, he’s all about helping players reach their full
             potential through focused, high-energy coaching.
         </p>
-        <Image src={placeholder} alt="" class="image" />
+        <Image
+            src={coachImage}
+            alt="soccer everyday academy training"
+            class="image"
+        />
         <div class="mission">
             <div class="mission-header">
                 <h3>Our Mission at Soccer Everyday Academy</h3>
@@ -96,7 +100,7 @@ import Triangle from "@icons/triangle-yellow.svg";
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: left;
+            object-position: -80px 0px;
         }
     }
 
@@ -112,6 +116,9 @@ import Triangle from "@icons/triangle-yellow.svg";
             width: 100%;
             margin-bottom: -2rem;
         }
+        .image {
+            object-position: -40px 0px;
+        }
     }
 
     @media (min-width: 1440px) {
@@ -120,6 +127,9 @@ import Triangle from "@icons/triangle-yellow.svg";
                 "title  image"
                 "text-content  image"
                 "mission image";
+        }
+        .image {
+            object-position: -120px 0px;
         }
     }
 </style>
