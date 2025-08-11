@@ -5,21 +5,26 @@ export interface Props {
     icon?: Image;
     text: string;
     link: string;
-    /** choose between the “default” (black bg / white text) or the “dark” theme */
     variant?: "default" | "yellow";
+    calendly?: boolean;
 }
 
-const { icon, text, link, variant = "default" } = Astro.props;
+const { icon, text, link, calendly, variant = "default" } = Astro.props;
 
 // compute a class name based on the variant:
 const className = `btn btn--${variant}`;
 ---
 
-<a href={link} class={className}>
+<a
+    href={calendly ? "#" : link}
+    class={className}
+    onclick={calendly
+        ? `Calendly.initPopupWidget({ url: '${link}' }); return false;`
+        : undefined}
+>
     {icon && <Image src={icon} alt={text} />}
     {text}
 </a>
-
 <style>
     /* base styles shared by both variants */
     .btn {

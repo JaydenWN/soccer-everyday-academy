@@ -3,7 +3,7 @@ import Tick from "@icons/tick-line-black.svg";
 import PrimaryButton from "../common/Primary_Button.astro";
 import contactIcon from "@icons/contact-black.svg";
 
-const { title, list } = Astro.props;
+const { title, list, link } = Astro.props;
 ---
 
 <div class="price-card">
@@ -22,10 +22,11 @@ const { title, list } = Astro.props;
     </ul>
     <div class="card-footer">
         <PrimaryButton
-            link="/contact-soccer-every-day-academy/#contact"
+            link={link}
             text="Book a session"
             icon={contactIcon}
             variant="yellow"
+            calendly={true}
         />
     </div>
 </div>
