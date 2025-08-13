@@ -1,15 +1,13 @@
 ---
 import Tick from "@icons/tick-line-black.svg";
-import PrimaryButton from "../common/Primary_Button.astro";
-import contactIcon from "@icons/contact-black.svg";
 
-const { title, list, link } = Astro.props;
+const { title, list } = Astro.props;
 ---
 
 <div class="price-card">
     <h2>{title}</h2>
     <div class="price-section">
-        <slot />
+        <slot name="price" />
     </div>
     <ul class="list-section">
         {
@@ -21,13 +19,7 @@ const { title, list, link } = Astro.props;
         }
     </ul>
     <div class="card-footer">
-        <PrimaryButton
-            link={link}
-            text="Book a session"
-            icon={contactIcon}
-            variant="yellow"
-            calendly={true}
-        />
+        <slot name="buttons" class="button-group" />
     </div>
 </div>
 

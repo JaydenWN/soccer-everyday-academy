@@ -1,5 +1,7 @@
 ---
+import PrimaryButton from "../common/Primary_Button.astro";
 import PricingCard from "./Pricing_Card.astro";
+import ContactIcon from "@icons/calander-black.svg";
 ---
 
 <section>
@@ -16,11 +18,30 @@ import PricingCard from "./Pricing_Card.astro";
                     "Complete Evaluation",
                     "75 Minute Session",
                 ]}
-                link="https://calendly.com/soccereverydayacademy-info/1v1-soccer-training"
             >
-                <p><strong>$65 Per Hour</strong></p>
-                <p>or</p>
-                <p><strong>8 Sessions for $480</strong></p>
+                <div slot="price">
+                    <p><strong>$65 Per Hour</strong></p>
+                    <p>or</p>
+                    <p><strong>8 Sessions for $480</strong></p>
+                </div>
+
+                <div slot="buttons" class="button-group">
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/soccer-1v1-1-day"
+                        text="Book Single Session"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/soccer-1v1-2-day"
+                        text="Book 8 Sessions"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+                </div>
             </PricingCard>
 
             <PricingCard
@@ -34,11 +55,31 @@ import PricingCard from "./Pricing_Card.astro";
                     "75 Minute Session",
                 ]}
             >
-                <p><strong>$325</strong></p>
-                <p>1 Day / (8 Weeks)</p>
-                <p><strong>$555</strong></p>
-                <p>2 Days / (8 Weeks)</p>
-                <small>Max 4 People. Min 8 Weeks.</small>
+                <div slot="price">
+                    <p><strong>$325</strong></p>
+                    <p>1 Day / (8 Weeks)</p>
+                    <p><strong>$555</strong></p>
+                    <p>2 Days / (8 Weeks)</p>
+                    <small>Max 4 People. Min 8 Weeks.</small>
+                </div>
+
+                <div slot="buttons" class="button-group">
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/soccer-small-group"
+                        text="Book 1 Day Per Week"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/soccer-small-group-2-days"
+                        text="Book 2 Days Per Week"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+                </div>
             </PricingCard>
 
             <PricingCard
@@ -52,10 +93,29 @@ import PricingCard from "./Pricing_Card.astro";
                     "75 Minute Session",
                 ]}
             >
-                <p><strong>$325</strong></p>
-                <p>1 Day / (8 Weeks)</p>
-                <p><strong>$555</strong></p>
-                <p>2 Days / (8 Weeks)</p>
+                <div slot="price">
+                    <p><strong>$325</strong></p>
+                    <p>1 Day / (8 Weeks)</p>
+                    <p><strong>$555</strong></p>
+                    <p>2 Days / (8 Weeks)</p>
+                </div>
+                <div slot="buttons" class="button-group">
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/strength-conditioning-1-day"
+                        text="Book 1 Day Per Week"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/strength-conditioning-2-days"
+                        text="Book 2 Days Per Week"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+                </div>
             </PricingCard>
 
             <PricingCard
@@ -67,9 +127,10 @@ import PricingCard from "./Pricing_Card.astro";
                     "Tactical Awareness",
                     "Build Confidence",
                 ]}
-                link="https://calendly.com/soccereverydayacademy-info/small-group-1-day-per-week"
             >
-                <p><strong>Contact For Pricing</strong></p>
+                <div slot="price">
+                    <p><strong>Contact For Pricing</strong></p>
+                </div>
             </PricingCard>
 
             <PricingCard
@@ -80,7 +141,9 @@ import PricingCard from "./Pricing_Card.astro";
                     "Ideal for Parents & Aspiring Coaches",
                 ]}
             >
-                <p><strong>Contact For Pricing</strong></p>
+                <div slot="price">
+                    <p><strong>Contact For Pricing</strong></p>
+                </div>
             </PricingCard>
         </div>
     </div>
@@ -103,11 +166,29 @@ import PricingCard from "./Pricing_Card.astro";
         padding: 1rem 1rem 0.8rem 1rem;
         font-size: 2em;
     }
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
     @media (min-width: 768px) {
         .pricing-cards {
             gap: 1rem;
             flex-direction: row;
             flex-wrap: wrap;
+        }
+        .button-group {
+            justify-content: start;
+            padding: 0px 1rem;
+            gap: 0.5rem;
+        }
+    }
+    @media (min-width: 1024px) {
+        .button-group {
+            justify-content: start;
+            padding: 0px 2rem;
+            gap: 0.5rem;
         }
     }
     @media (min-width: 1440px) {
