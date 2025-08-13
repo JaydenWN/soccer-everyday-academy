@@ -19,7 +19,7 @@ const className = `btn btn--${variant}`;
     href={calendly ? "#" : link}
     class={className}
     onclick={calendly
-        ? `Calendly.initPopupWidget({ url: '${link}' }); return false;`
+        ? `Calendly.initPopupWidget({ url: '${link}?background_color=1e1e1e&text_color=ffffff&primary_color=f7ea3e' }); return false;`
         : undefined}
 >
     {icon && <Image src={icon} alt={text} />}
