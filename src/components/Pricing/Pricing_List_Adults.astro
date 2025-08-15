@@ -81,33 +81,31 @@ import ContactIcon from "@icons/calander-black.svg";
                 </div>
             </PricingCard>
 
-            <div class="button-group" slot="buttons">
-                <PricingCard
-                    title="Single Group Session"
-                    list={[
-                        "Train with Others",
-                        "Strength",
-                        "Nutrition",
-                        "Mobility",
-                        "Individual Feedback",
-                        "75 Minute Session",
-                    ]}
-                    link="https://calendly.com/soccereverydayacademy-info/adult-small-group"
-                >
-                    <div slot="price">
-                        <p><strong>$50</strong></p>
-                    </div>
-                    <div slot="buttons" class="button-group">
-                        <PrimaryButton
-                            calendly={true}
-                            link="https://calendly.com/soccereverydayacademy-info/personal-training-one-off"
-                            text="Book Single Session"
-                            variant="yellow"
-                            icon={ContactIcon}
-                        />
-                    </div>
-                </PricingCard>
-            </div>
+            <PricingCard
+                title="Single Group Session"
+                list={[
+                    "Train with Others",
+                    "Strength",
+                    "Nutrition",
+                    "Mobility",
+                    "Individual Feedback",
+                    "75 Minute Session",
+                ]}
+                link="https://calendly.com/soccereverydayacademy-info/adult-small-group"
+            >
+                <div slot="price">
+                    <p><strong>$50</strong></p>
+                </div>
+                <div slot="buttons" class="button-group">
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/personal-training-one-off"
+                        text="Book Single Session"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+                </div>
+            </PricingCard>
         </div>
     </div>
 </section>
