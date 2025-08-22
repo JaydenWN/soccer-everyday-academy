@@ -1,0 +1,27 @@
+---
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import TournamentInfo from "../components/Tournaments/Tournament_Info.astro";
+
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Soccer Tournaments SEA | Central Coast & Sydney"
+    description="Ready to train? Reach out to Soccer Every Day Academy for personal football coaching, group sessions, clinics and more. Based on the Central Coast."
+>
+    <!-- Calendly link widget begin -->
+    <link
+        href="https://assets.calendly.com/assets/external/widget.css"
+        rel="stylesheet"
+    />
+    <script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        type="text/javascript"
+        async></script>
+    <!-- Calendly link widget end -->
+    <SubpageHero
+        title="Central Coast and Sydney Soccer Tournaments"
+        text="We are seeking 12 serious soccer players to play in tournaments across the Central Coast and Sydney. Two sessions each week. $70 per session. Sessions run for 60 to 80 minutes."
+    />
+    <TournamentInfo />
+</Layout>

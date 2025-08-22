@@ -1,0 +1,162 @@
+---
+import Checkmark from "@icons/tick-black.svg";
+import PrimaryButton from "../common/Primary_Button.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>Join the Team</h2>
+        <div class="text-content">
+            <p>
+                We are opening up <strong>12 places</strong> for players who want
+                to compete at tournament level across the <strong
+                    >Central Coast and Sydney.</strong
+                >
+            </p>
+            <p>
+                You will train under a Head Coach with <strong
+                    >international experience,</strong
+                >
+                learning both <strong
+                    >skills acquisition and tactical play.</strong
+                > Every week you will also receive <strong
+                    >video analysis feedback</strong
+                > so you know exactly how to keep improving.
+            </p>
+            <p>
+                Training is built to help you play like a pro with two sessions
+                each week. Each session runs for <strong
+                    >60 to 80 minutes and costs $70 per player.</strong
+                >
+            </p>
+            <p>
+                This program is not about talent alone. If you are willing to
+                learn and work hard, you will fit right in.
+            </p>
+            <p>
+                Bring a friend and you both receive a <strong
+                    >10% discount when you sign up together.</strong
+                > Spots are limited, so act fast.
+            </p>
+        </div>
+
+        <div class="price-card">
+            <div class="header">
+                <h2>Sign up</h2>
+                <p>$70 Per Session</p>
+            </div>
+            <ul>
+                <li><Checkmark class="icon" />Acquisition skills</li>
+                <li><Checkmark class="icon" />Tactical skills</li>
+                <li><Checkmark class="icon" />Tactical skills</li>
+                <li><Checkmark class="icon" />Video analysis</li>
+                <li><Checkmark class="icon" />Play like a Pro</li>
+            </ul>
+
+            <div class="buttons">
+                <PrimaryButton
+                    calendly={true}
+                    link="https://calendly.com/soccereverydayacademy-info/soccer-tournament"
+                    text="Book Now"
+                    variant="yellow"
+                />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-size: 2.6em;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .price-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: 2px solid black;
+        margin-top: 2em;
+    }
+
+    .header {
+        background-color: var(--grey);
+        padding: 2rem;
+        text-align: center;
+    }
+    .header > p {
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 2rem auto;
+    }
+    li {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .icon {
+        width: 24px;
+        height: auto;
+    }
+
+    .buttons {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        .text-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 4rem;
+            column-gap: 2rem;
+        }
+        .container {
+            gap: 4rem;
+        }
+        .price-card {
+            width: 50%;
+        }
+    }
+    @media (min-width: 1024px) {
+        .text-content {
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .price-card {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+            margin-top: 0px;
+            width: 100%;
+            height: fit-content;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .container {
+            column-gap: 12rem;
+        }
+    }
+</style>
