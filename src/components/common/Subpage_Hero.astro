@@ -4,7 +4,7 @@ import PrimaryButton from "./Primary_Button.astro";
 import callIcon from "@icons/phone-white.svg";
 import contactIcon from "@icons/contact-black.svg";
 
-const { title, text } = Astro.props;
+const { title, text, link } = Astro.props;
 ---
 
 <section>
@@ -18,7 +18,7 @@ const { title, text } = Astro.props;
                 icon={callIcon}
             />
             <PrimaryButton
-                link="/football-training-prices-central-coast"
+                link={link ? link : "/football-training-prices-central-coast"}
                 text="Book a session"
                 icon={contactIcon}
                 variant="yellow"

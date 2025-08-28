@@ -155,6 +155,36 @@ import ContactIcon from "@icons/calander-black.svg";
                     <p><strong>Contact For Pricing</strong></p>
                 </div>
             </PricingCard>
+
+            <PricingCard
+                title="Soccer Tournaments"
+                list={[
+                    "Acquisition skills",
+                    "Tactical skills",
+                    "Video analysis",
+                    "Tactical Awareness",
+                    "Play like a Pro",
+                ]}
+            >
+                <div slot="price">
+                    <p><strong>$560</strong></p>
+                    <p>2 Days Per Week for 8 Weeks</p>
+                </div>
+                <div slot="buttons" class="button-group">
+                    <PrimaryButton
+                        calendly={true}
+                        link="https://calendly.com/soccereverydayacademy-info/soccer-tournament"
+                        text="Book Now"
+                        variant="yellow"
+                        icon={ContactIcon}
+                    />
+                    <PrimaryButton
+                        link="/soccer-tournaments"
+                        text="More Info"
+                        variant="default"
+                    />
+                </div>
+            </PricingCard>
         </div>
     </div>
 </section>
